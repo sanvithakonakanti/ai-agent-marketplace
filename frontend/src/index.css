@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', 'Inter', 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #e2e8f0;
+  background: radial-gradient(1400px 800px at 20% -10%, rgba(59, 130, 246, 0.25), transparent),
+    radial-gradient(1200px 700px at 100% 0%, rgba(168, 85, 247, 0.22), transparent),
+    #070b17;
+}
+
+@layer components {
+  .app-bg {
+    @apply bg-slate-950 text-slate-100;
+    background-image: radial-gradient(circle at 20% 10%, rgba(56, 189, 248, 0.16), transparent 30%),
+      radial-gradient(circle at 80% 0%, rgba(139, 92, 246, 0.2), transparent 35%),
+      radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.1), transparent 40%);
+  }
+
+  .glass-card {
+    @apply border border-white/15 bg-slate-900/70 backdrop-blur-xl shadow-2xl shadow-blue-900/20 rounded-2xl;
+  }
+
+  .soft-panel {
+    @apply border border-white/10 bg-slate-900/60 rounded-2xl;
+  }
+
+  .neon-button {
+    @apply inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold text-white transition-all duration-300;
+    @apply bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.35);
+  }
+
+  .neon-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(99, 102, 241, 0.45);
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-xl border border-cyan-300/30 bg-cyan-400/10 px-6 py-3 font-semibold text-cyan-100 transition-all duration-300;
+  }
+
+  .secondary-button:hover {
+    @apply bg-cyan-300/20 border-cyan-200/50;
+    transform: translateY(-2px);
+  }
+
+  .input-dark {
+    @apply w-full rounded-xl border border-white/15 bg-slate-950/70 px-4 py-3 text-slate-100 placeholder-slate-500 outline-none transition-all;
+    @apply focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-400/20;
+  }
+}
+
+@keyframes floatPulse {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+}
+
+.animate-float-pulse {
+  animation: floatPulse 5s ease-in-out infinite;
+}
