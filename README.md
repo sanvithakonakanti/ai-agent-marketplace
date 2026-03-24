@@ -305,7 +305,7 @@ NODE
 - `backend/services/aiService.js` handles quota fallback.
 - `backend/services/algorandService.js` handles Algorand network disconnect with a demo state.
 - If using real payments, replace mock tokens and remove fallback snippet.
-=======
+  
 # ai-agent-marketplace
 blockchain decentralized application
 >>>>>>> c762a4ed9450bc103ce6a729a0b8cf346e1f5328
