@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # AI Agent Marketplace on Blockchain
 
 ## Overview
